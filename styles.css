@@ -1,0 +1,118 @@
+/* CSS */
+body {
+    margin: 0;
+}
+nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 8px 32px 8px 16px;
+    background-color: hsl(25, 10%, 22%);
+    position: relative;
+}
+
+nav button {
+    padding: 8px 16px;
+    border: 1px solid hsl(25, 10%, 12%);
+    background-color: hsl(25, 10%, 22%);
+    color: hsl(46, 88%, 45%);
+    border-radius: 100px 100px;
+    cursor: pointer;
+}
+nav button:hover {
+    border-color: hsl(25, 10%, 12%);
+    background-color: hsl(25, 10%, 32%);
+    color: hsl(46, 88%, 55%);
+}
+nav button span:first-child {
+    display: inline-block;
+    font-size: 125%;
+}
+nav form {
+    background-color: hsl(25, 10%, 22%);
+    padding: 8px 16px;
+    position: absolute;
+    top: 100%;
+    right: 16px;
+    display: flex;
+    flex-direction: column;
+}
+nav form.hidden {
+    display: none;
+}
+nav form input:not(:last-child){
+    margin-bottom: 4px;
+    border: 0;
+    padding: 8px;
+    font-size: inherit;
+}
+nav form input:last-child {
+    align-self: flex-end;
+    padding: 8px 16px;
+    margin-top: 4px;
+    border-radius: 2px;
+    color: white;
+    border: 1px solid hsl(125, 50%, 50%);
+    background-color: hsl(125, 50%, 60%);
+    cursor: pointer;
+}
+nav form input:last-child:hover {
+    border-color: hsl(125, 50%, 40%);
+    background-color: hsl(125, 50%, 50%);
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+nav #userProfiles {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 16px;
+    background-color: hsl(25, 10%, 22%);
+    padding: 16px;
+    font-family: sans-serif;
+}
+nav #userProfiles::before {
+    content: 'Users';
+    display: block;
+    background-color: hsl(46, 88%, 55%);
+    color: hsl(0, 0%, 9%);
+    padding: 4px;
+}
+nav #userProfiles::after {
+    content: '';
+    display: block;
+    border-width: 0px 16px 8px 16px;
+    border-style: solid;
+    border-color: transparent transparent hsl(25, 10%, 22%) transparent;
+    position: absolute;
+    bottom: 100%;
+    left: 16px;
+}
+nav #userProfiles > li {
+    padding: 8px 0 0;
+    display: flex;
+    align-items: center;
+}
+nav #userProfiles > li:not(:last-child){
+    padding: 8px 0;
+    border-bottom: 1px solid hsl(25, 10%, 32%);
+}
+nav #userProfiles ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 28px;
+    height: 28px;
+}
+nav #userProfiles ul li {
+    flex: none;
+    width: 25%;
+}
+nav #userProfiles h1 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 200;
+    margin-left: 8px;
+    color: white;
+}
